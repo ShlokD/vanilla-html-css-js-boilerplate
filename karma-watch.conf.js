@@ -21,8 +21,8 @@ const karmaConf = function (config) {
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
       'node_modules/chai/chai.js',
-      'src/js/**/*.js',
-      'tests/js/**/*.spec.js'
+      'src/js/*.js',
+      'tests/js/*.spec.js'
     ],
 
     // list of files / patterns to exclude
@@ -77,12 +77,12 @@ const karmaConf = function (config) {
     logLevel: config.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
-    singleRun: true,
+    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous

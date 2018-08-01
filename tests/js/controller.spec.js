@@ -1,5 +1,4 @@
 import { sum } from '../../src/js/controller';
-import { expect } from 'chai';
 
 describe('Sum', () => {
   let actual;
@@ -9,5 +8,11 @@ describe('Sum', () => {
     actual = 3;
     expected = sum(1, 2);
     expect(expected).to.equal(actual);
+  });
+
+  it('should not return incorrect sum', () => {
+    actual = 4;
+    expected = sum(1, 2);
+    expect(expected).to.not.equal(actual);
   });
 });
