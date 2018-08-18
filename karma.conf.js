@@ -27,7 +27,8 @@ const karmaConf = function (config) {
 
     // list of files / patterns to exclude
     exclude: [
-      '*.css'
+      '*.css',
+      '*.scss'
     ],
 
     // preprocess matching files before serving them to the browser
@@ -54,7 +55,7 @@ const karmaConf = function (config) {
             loader: 'json-loader'
           },
           {
-            test: /\.css$/,
+            test: /\.(css|scss)$/,
             loader: 'null-loader'
           }
         ]
